@@ -34,8 +34,8 @@ st.table(dados)
 st.subheader("Relação entre os dados")
 campos = st.multiselect("Selecione as variaveis a ser analisadas", analise_geral.buscar_colunas())
 if campos:
-    corr, p_valor = analise_geral.correlacionar(campos)
-    st.write(f'As variaveis tem um grau de significancia de {round(p_valor,4)} e uma correlação de {round(corr,4)}')
+    # corr, p_valor = analise_geral.correlacionar(campos)
+    # st.write(f'As variaveis tem um grau de significancia de {round(p_valor,4)} e uma correlação de {round(corr,4)}')
     dados_compostos = analise_geral.buscar_dados_agrupados_por(campos)
     st.table(dados_compostos)
 
