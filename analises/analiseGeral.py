@@ -1,9 +1,5 @@
-import numpy as np
+
 import pandas as pd
-from scipy.stats import kendalltau
-from sklearn.preprocessing import OrdinalEncoder
-from sklearn_extra.cluster import KMedoids
-from sklearn.metrics import pairwise_distances
 
 class AnaliseGeral:
     def __init__(self) -> None:
@@ -31,31 +27,31 @@ class AnaliseGeral:
     def buscar_correlacao(self, colunas):
         return self.df[colunas].corr(method='kendall')
     
-    def calculate_wcss(self, df_encoded, max_clusters):
-        wcss = []
-        dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
-        for n in range(1, max_clusters + 1):
-            kmedoids = KMedoids(n_clusters=n, metric='precomputed', random_state=42)
-            kmedoids.fit(dist_matrix)
-            wcss.append(kmedoids.inertia_)
-        return wcss
+    # def calculate_wcss(self, df_encoded, max_clusters):
+    #     wcss = []
+    #     dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
+    #     for n in range(1, max_clusters + 1):
+    #         kmedoids = KMedoids(n_clusters=n, metric='precomputed', random_state=42)
+    #         kmedoids.fit(dist_matrix)
+    #         wcss.append(kmedoids.inertia_)
+    #     return wcss
     
-    def determinar_clusters(self, max_clusters, colunas):
-        encoder = OrdinalEncoder()
-        df_encoded = encoder.fit_transform(self.df[colunas])
-        wcss = self.calculate_wcss(df_encoded, max_clusters)
-        return wcss
+    # def determinar_clusters(self, max_clusters, colunas):
+    #     encoder = OrdinalEncoder()
+    #     df_encoded = encoder.fit_transform(self.df[colunas])
+    #     wcss = self.calculate_wcss(df_encoded, max_clusters)
+    #     return wcss
     
-    def clusterizar(self, n_clusters, colunas):
-        encoder = OrdinalEncoder()
-        df_encoded = encoder.fit_transform(self.df)
-        dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
-        kmedoids = KMedoids(n_clusters=n_clusters, metric='precomputed', random_state=42)
-        clusters = kmedoids.fit_predict(dist_matrix)
-        return df_encoded, clusters
+    # def clusterizar(self, n_clusters, colunas):
+    #     encoder = OrdinalEncoder()
+    #     df_encoded = encoder.fit_transform(self.df)
+    #     dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
+    #     kmedoids = KMedoids(n_clusters=n_clusters, metric='precomputed', random_state=42)
+    #     clusters = kmedoids.fit_predict(dist_matrix)
+    #     return df_encoded, clusters
 
-    def correlacionar(self, campos):
-        campo_1 = campos[0]
-        campo_2 = campos[1]
-        corr, p_value = kendalltau(self.df[campo_1], self.df[campo_2])
-        return corr, p_value
+    # def correlacionar(self, campos):
+    #     campo_1 = campos[0]
+    #     campo_2 = campos[1]
+    #     corr, p_value = kendalltau(self.df[campo_1], self.df[campo_2])
+    #     return corr, p_value
