@@ -34,8 +34,8 @@ st.table(dados)
 st.subheader("Relação entre os dados")
 campos = st.multiselect("Selecione as variaveis a ser analisadas", analise_geral.buscar_colunas())
 if campos:
-    # corr, p_valor = analise_geral.correlacionar(campos)
-    # st.write(f'As variaveis tem um grau de significancia de {round(p_valor,4)} e uma correlação de {round(corr,4)}')
+    corr, p_valor = analise_geral.correlacionar(campos)
+    st.write(f'As variaveis tem um grau de significancia de {round(p_valor,4)} e uma correlação de {round(corr,4)}')
     dados_compostos = analise_geral.buscar_dados_agrupados_por(campos)
     st.table(dados_compostos)
 
@@ -52,25 +52,25 @@ if campos_correlacao:
 ## Clusterização
 st.subheader('Classificacao')
 
-# campos_correlacao = st.multiselect("Selecione campos para classificacao", analise_geral.buscar_colunas_numericas())
-# if campos_correlacao:
-#     max_clusters = int(st.number_input("Quantidade maxima de clusters", min_value=1))
-#     if max_clusters > 0:
-#         wcss = analise_geral.determinar_clusters(max_clusters, campos_correlacao)
+campos_correlacao = st.multiselect("Selecione campos para classificacao", analise_geral.buscar_colunas_numericas())
+if campos_correlacao:
+    max_clusters = int(st.number_input("Quantidade maxima de clusters", min_value=1))
+    if max_clusters > 0:
+        wcss = analise_geral.determinar_clusters(max_clusters)
 
-#         plt.figure(figsize=(10, 5))
-#         plt.plot(range(1, max_clusters + 1), wcss, 'bo-')
-#         plt.xlabel('Número de Clusters')
-#         plt.ylabel('WCSS')
-#         plt.title('Técnica do Cotovelo para Determinação do Número de Clusters')
-#         st.pyplot(plt)
+        plt.figure(figsize=(10, 5))
+        plt.plot(range(1, max_clusters + 1), wcss, 'bo-')
+        plt.xlabel('Número de Clusters')
+        plt.ylabel('WCSS')
+        plt.title('Técnica do Cotovelo para Determinação do Número de Clusters')
+        st.pyplot(plt)
 
-#     num_clusters = int(st.number_input("Quantidade de clusters", min_value=1))
-#     df_encoded, clusters = analise_geral.clusterizar(num_clusters, campos_correlacao)
-#     st.dataframe(df_encoded)
-#     plt.figure(figsize=(10, 5))
-#     sns.scatterplot(x=df_encoded[:, 0], y=df_encoded[:, 1], hue=clusters, palette='viridis', s=100)
-#     plt.title('Clusters K-Medoids')
-#     plt.xlabel(f'{campos_correlacao[0]}')
-#     plt.ylabel(f'{campos_correlacao[1]}')
-#     st.pyplot(plt)
+    num_clusters = int(st.number_input("Quantidade de clusters", min_value=1))
+    df_encoded, clusters = analise_geral.clusterizar(num_clusters)
+    st.dataframe(df_encoded)
+    plt.figure(figsize=(10, 5))
+    sns.scatterplot(x=df_encoded[:, 0], y=df_encoded[:, 1], hue=clusters, palette='viridis', s=100)
+    plt.title('Clusters K-Medoids')
+    plt.xlabel(f'{campos_correlacao[0]}')
+    plt.ylabel(f'{campos_correlacao[1]}')
+    st.pyplot(plt)
