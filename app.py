@@ -1,8 +1,6 @@
 import altair as alt
 import streamlit as st
 from analises.analiseGeral import AnaliseGeral
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 ## Criação da analise
 analise_geral = AnaliseGeral()
@@ -13,15 +11,14 @@ st.subheader('Avaliação de dados ordinais')
 st.write(f'total de respostas: {analise_geral.buscar_qtd_dados()}')
 
 ## Gerar graficos de barras:
-campo = st.selectbox("Selelcione um campo", analise_geral.buscar_colunas())
-dados = analise_geral.buscar_dados_agrupados_por(campo)
-
-st.subheader(f'{campo}')
+campo = st.selectbox("Selecione um campo", analise_geral.buscar_colunas_texto())
+dados = analise_geral.buscar_dados_agrupados_por([campo])
 
 # Exibindo o gráfico no Streamlit
 bar_chart = alt.Chart(dados).mark_bar().encode(
     x=alt.X('quantidade', title='quantidade'),
-    y=alt.Y(campo, title=campo, sort='-x')
+    y=alt.Y(campo, title=campo, sort='-x'),
+    color=campo
 ).properties(
     title=f'Gráfico de Barras: {campo}'
 )
@@ -30,47 +27,99 @@ st.altair_chart(bar_chart, use_container_width=True)
 ## Gerar tablea
 st.table(dados)
 
-## Diagrama de venn
-st.subheader("Relação entre os dados")
-campos = st.multiselect("Selecione as variaveis a ser analisadas", analise_geral.buscar_colunas())
-if campos:
-    corr, p_valor = analise_geral.correlacionar(campos)
-    st.write(f'As variaveis tem um grau de significancia de {round(p_valor,4)} e uma correlação de {round(corr,4)}')
-    dados_compostos = analise_geral.buscar_dados_agrupados_por(campos)
-    st.table(dados_compostos)
-
 ## Correlação
 st.subheader('Correlação')
+
+st.write('Todas as variaveis')
+valor_correlacao = st.number_input("buscar dados correlatos acima de:")
+dados_correlatos = analise_geral.buscar_correlacao_acima_de(valor_correlacao)
+chart_heatmap = alt.Chart(dados_correlatos).mark_rect().encode(
+    x='level_0',
+    y='level_1',
+    color='correlation',
+    text='correlation_label'
+)
+st.altair_chart(chart_heatmap, use_container_width=True)
+
+st.write('correlação com variaveis selecionadas')
 campos_correlacao = st.multiselect("Selecione campos correlacao", analise_geral.buscar_colunas_numericas())
-if campos_correlacao:
+if len(campos_correlacao) > 1:
     correlacao = analise_geral.buscar_correlacao(campos_correlacao)
-    fig, ax = plt.subplots()
-    fig, ax = plt.subplots()
-    sns.heatmap(correlacao, ax=ax)
-    st.write(fig)
+    chart_heatmap = alt.Chart(correlacao).mark_rect().encode(
+        x='level_0',
+        y='level_1',
+        color='correlation',
+        text='correlation_label'
+    )
+    st.altair_chart(chart_heatmap, use_container_width=True)
+## Diagrama de venn
+st.subheader("Relação entre os dados")
 
-## Clusterização
-st.subheader('Classificacao')
+campos_geracao = st.selectbox("Selecione variavel para geracao do grafico", analise_geral.buscar_colunas_texto())
+campos_comparacao = st.selectbox("Selecione campos para comparacao", analise_geral.buscar_colunas_texto())
+campos = analise_geral.set_list(campos_geracao, campos_comparacao)
+if len(campos) > 1:
+    df = analise_geral.buscar_dados_agrupados_por(list(campos))
+    corr, p_value = analise_geral.correlacionar(list(campos))
+    st.write(f'O nivel de significancia(p valor) é de {round(p_value,2)} com uma correlação de {round(corr,2)}')
+    st.table(df)
+    for item in df[campos_geracao].unique():
+        df_filter = df[df[campos_geracao] == item]
+        
+        bar_chart = alt.Chart(df_filter).mark_bar().encode(
+        x=alt.X('quantidade', title='quantidade'),
+        y=alt.Y(campos_comparacao, title=campos_comparacao, sort='-x'),
+        color=campos_comparacao
+        ).properties(
+            title=f'Gráfico de Barras: {item}'
+        )
+        st.altair_chart(bar_chart, use_container_width=True)
 
-campos_correlacao = st.multiselect("Selecione campos para classificacao", analise_geral.buscar_colunas_numericas())
-if campos_correlacao:
-    max_clusters = int(st.number_input("Quantidade maxima de clusters", min_value=1))
-    if max_clusters > 0:
-        wcss = analise_geral.determinar_clusters(max_clusters)
+campos_multivariados = st.multiselect("Selecione variaveis para verificar os grupos", analise_geral.buscar_colunas_texto())
+if len(campos_multivariados) > 1:
+    df = analise_geral.buscar_dados_agrupados_por(list(campos_multivariados))
+    st.dataframe(df)
+    bar_chart = alt.Chart(df).mark_bar().encode(
+        x=alt.X('quantidade', title='quantidade'),
+        y=alt.Y('categoria', title=campo, sort='-x'),
+        color='categoria'
+    ).properties(
+        title=f'Gráfico de Barras: {campo}'
+    )
+    st.altair_chart(bar_chart, use_container_width=True)
 
-        plt.figure(figsize=(10, 5))
-        plt.plot(range(1, max_clusters + 1), wcss, 'bo-')
-        plt.xlabel('Número de Clusters')
-        plt.ylabel('WCSS')
-        plt.title('Técnica do Cotovelo para Determinação do Número de Clusters')
-        st.pyplot(plt)
-
-    num_clusters = int(st.number_input("Quantidade de clusters", min_value=1))
-    df_encoded, clusters = analise_geral.clusterizar(num_clusters)
-    st.dataframe(df_encoded)
-    plt.figure(figsize=(10, 5))
-    sns.scatterplot(x=df_encoded[:, 0], y=df_encoded[:, 1], hue=clusters, palette='viridis', s=100)
-    plt.title('Clusters K-Medoids')
-    plt.xlabel(f'{campos_correlacao[0]}')
-    plt.ylabel(f'{campos_correlacao[1]}')
-    st.pyplot(plt)
+st.subheader('Classificação')
+campos_clusterizacao = st.multiselect("Selecione dois campos para classificacao", analise_geral.buscar_colunas_numericas())
+if len(campos_clusterizacao) == 2:
+    dados_clusterizar = analise_geral.buscar_valores_colunas(campos_clusterizacao)
+    
+    df_qt_clusters, k_ideal = analise_geral.determinar_clusters(campos_clusterizacao)
+    st.write('Tecnica do cotovelo para determiar a quantidade de agrupamentos')
+    
+    grafico_cotovelo = alt.Chart(df_qt_clusters).mark_line().encode(
+        x='k:Q',
+        y='SSE:Q'
+    )
+    st.altair_chart(grafico_cotovelo)
+    qtd_cluster = st.number_input("Selecione o valores no meio da curvatura do grafico acima", min_value=1)
+    clusters = analise_geral.clusterizar(qtd_cluster, campos_clusterizacao)
+    dados_clusterizar['clusters'] = clusters
+    
+    grafico_pontos = alt.Chart(dados_clusterizar).mark_point().encode(
+        x=campos_clusterizacao[0],
+        y=campos_clusterizacao[1],
+        color='clusters:N'
+    )
+    
+    st.altair_chart(grafico_pontos, use_container_width=True)
+    nome_coluna_1 = campos_clusterizacao[0].replace('_Numerico', '')
+    legenda_1 = analise_geral.buscar_valores_distintos_coluna(nome_coluna_1)
+    st.write(nome_coluna_1)
+    for i in range(len(legenda_1)):
+        st.write(str((i + 1)) +" = " + str(legenda_1[i]))
+    
+    nome_coluna_2 = campos_clusterizacao[1].replace('_Numerico', '')
+    legenda_2 = analise_geral.buscar_valores_distintos_coluna(nome_coluna_2)
+    st.write(nome_coluna_2)
+    for i in range(len(legenda_2)):
+        st.write(str((i + 1)) +" = " + str(legenda_2[i]))

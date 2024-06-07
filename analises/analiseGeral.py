@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import kendalltau
 from sklearn.metrics import pairwise_distances
 from sklearn.preprocessing import OrdinalEncoder
-from sklearn_extra.cluster import KMedoids
+from sklearn.cluster import KMeans
 
 class AnaliseGeral:
     def __init__(self) -> None:
@@ -13,48 +13,83 @@ class AnaliseGeral:
         colunas.pop(0)
         return colunas
     
-    def buscar_valores_coluna(self, coluna):
+    def buscar_colunas_numericas(self):
+        return self.df.select_dtypes(include='number').columns
+    
+    def buscar_colunas_texto(self):
+        return self.df.select_dtypes(include=['object']).columns
+    
+    def buscar_valores_distintos_coluna(self, coluna):
         return self.df[coluna].unique()
+    
+    def buscar_valores_colunas(self, coluna):
+        return self.df[coluna]
     
     def buscar_qtd_dados(self):
         return len(self.df)
         
-    def buscar_dados_agrupados_por(self, campos):
+    def buscar_dados_agrupados_por(self, campos: list):
         dados_agrupados = self.df.groupby(campos).size().reset_index(name='quantidade')
-        dados_agrupados['poecentagem'] = round((dados_agrupados['quantidade'] / self.buscar_qtd_dados()) * 100, 2)
+        dados_agrupados['porcentagem'] = round((dados_agrupados['quantidade'] / self.buscar_qtd_dados()) * 100, 2)
+        
+        categorias = []
+        
+        for index, row in dados_agrupados.iterrows():
+            categoria = ''
+            for campo in campos:
+                categoria = categoria + ' ' + row[campo]
+            categorias.append(categoria)
+        
+        dados_agrupados['categoria'] = categorias
         return dados_agrupados
-    
-    def buscar_colunas_numericas(self):
-        return self.df.select_dtypes(include='number').columns
-    
+        
     def buscar_correlacao(self, colunas):
-        return self.df[colunas].corr(method='kendall')
+        coorelacao = self.df[colunas].corr(method='kendall').stack().reset_index().rename(columns={0: 'correlation'})
+        coorelacao['correlation_label'] = coorelacao.iloc[:, [2]].map('{:.2f}'.format)
+        return coorelacao
     
-    def calculate_wcss(self, df_encoded, max_clusters):
-        wcss = []
-        dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
-        for n in range(1, max_clusters + 1):
-            kmedoids = KMedoids(n_clusters=n, metric='precomputed', random_state=42)
-            kmedoids.fit(dist_matrix)
-            wcss.append(kmedoids.inertia_)
-        return wcss
+    def buscar_correlacao_acima_de(self, valor):
+        df_correlacao = self.df[self.buscar_colunas_numericas()]
+        correlacao = df_correlacao.corr(method='kendall').stack().reset_index().rename(columns={0: 'correlation'})
+        correlacao['correlation_label'] = correlacao.iloc[:, [2]].map('{:.2f}'.format)
+        return correlacao[correlacao['correlation'] > valor] 
     
-    def determinar_clusters(self, max_clusters):
+    def calculate_wcss(self, df_encoded):
+        range_k = range(2, 30)
+        lista_sse = []
+        lista_k = []
+
+        for k in range_k:
+            kmeans = KMeans(n_clusters=k)
+            kmeans.fit(df_encoded)
+            lista_sse.append(kmeans.inertia_)
+            lista_k.append(k)
+        k_ideal = lista_k[lista_sse.index(min(lista_sse))]
+        df_qt_clusters = pd.DataFrame({'k': lista_k, 'SSE': lista_sse})
+        return df_qt_clusters, k_ideal
+    
+    def determinar_clusters(self, colunas):
         encoder = OrdinalEncoder()
-        df_encoded = encoder.fit_transform(self.df)
-        wcss = self.calculate_wcss(df_encoded, max_clusters)
-        return wcss
+        df_encoded = encoder.fit_transform(self.df[colunas])
+        df_qt_clusters, k_ideal = self.calculate_wcss(df_encoded)
+        return df_qt_clusters, k_ideal
     
-    def clusterizar(self, n_clusters):
+    def clusterizar(self, n_clusters, colunas):
         encoder = OrdinalEncoder()
-        df_encoded = encoder.fit_transform(self.df)
-        dist_matrix = pairwise_distances(df_encoded, metric='manhattan')
-        kmedoids = KMedoids(n_clusters=n_clusters, metric='precomputed', random_state=42)
-        clusters = kmedoids.fit_predict(dist_matrix)
-        return df_encoded, clusters
+        df_encoded = encoder.fit_transform(self.df[colunas])
+        kmeans = KMeans(n_clusters=n_clusters)
+        kmeans.fit(df_encoded)
+        return kmeans.labels_
 
     def correlacionar(self, campos):
         campo_1 = campos[0]
         campo_2 = campos[1]
         corr, p_value = kendalltau(self.df[campo_1], self.df[campo_2])
         return corr, p_value
+    
+    def set_list(self, campo_1, campo_2):
+        return set([campo_1,campo_2])
+    
+    def legendar_dados(colunas):
+        legenda_1 = ''
+    
