@@ -7,8 +7,8 @@ analise_geral = AnaliseGeral()
 
 st.title('Analise')
 st.subheader('Avaliar dados pelo conjunto')
-st.write('(pergunta Quem é responsável por custear os seus estudos)')
-campo_resposta = st.multiselect("Selecione campos resposta para analise população", analise_geral.buscar_valores_completo_distintos_coluna('resposta'))
+st.write('17. Com frequência, a vida universitária me causa estresse, ansiedade ou angústia.')
+campo_resposta = st.multiselect("Selecione campos resposta para analise população", analise_geral.buscar_valores_completo_distintos_coluna('frequentemente_tem_estresse_ansiedade'))
 if len(campo_resposta) > 0:
     dados_resposta = analise_geral.valores_filtrados_resposta(campo_resposta)
     st.dataframe(dados_resposta)
