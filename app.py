@@ -6,7 +6,15 @@ from analises.analiseGeral import AnaliseGeral
 analise_geral = AnaliseGeral()
 
 st.title('Analise')
-st.subheader('Avaliação de dados ordinais')
+st.subheader('Avaliar dados pelo conjunto')
+st.write('(pergunta Quem é responsável por custear os seus estudos)')
+campo_resposta = st.multiselect("Selecione campos resposta para analise população", analise_geral.buscar_valores_completo_distintos_coluna('resposta'))
+if len(campo_resposta) > 0:
+    dados_resposta = analise_geral.valores_filtrados_resposta(campo_resposta)
+    st.dataframe(dados_resposta)
+    analise_geral.alterar_df(dados_resposta)
+
+st.subheader('Inicio das analises')
 
 st.write(f'total de respostas: {analise_geral.buscar_qtd_dados()}')
 
@@ -52,9 +60,8 @@ if len(campos_correlacao) > 1:
         text='correlation_label'
     )
     st.altair_chart(chart_heatmap, use_container_width=True)
-## Diagrama de venn
+    
 st.subheader("Relação entre os dados")
-
 campos_geracao = st.selectbox("Selecione variavel para geracao do grafico", analise_geral.buscar_colunas_texto())
 campos_comparacao = st.selectbox("Selecione campos para comparacao", analise_geral.buscar_colunas_texto())
 campos = analise_geral.set_list(campos_geracao, campos_comparacao)

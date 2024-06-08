@@ -1,0 +1,439 @@
+id,resposta,resposta_Numerico
+1, bolsa de estudos integral pelo PROUNI,1
+2,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+3, bolsa de estudos integral pelo PROUNI,1
+4,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+4, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+5,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+6, bolsa de estudos integral pelo PROUNI,1
+7, bolsa de estudos integral pelo PROUNI,1
+8,Meus estudos são custeados integralmente por mim,5
+9,Meus estudos são custeados parcialmente por mim,6
+10,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+11,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+12, bolsa de estudos integral pelo PROUNI,1
+13,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+13, bolsa de estudos por vir de transferência externa,8
+14,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+15,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+16,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+17, bolsa de estudos integral pelo PROUNI,1
+18, bolsa institucional,9
+19,Meus estudos são custeados integralmente por mim,5
+20,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+21, bolsa de estudos parcial pelo Bolsa Social PUC Minas,10
+22,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+23,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+23," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+24,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+25,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+26, bolsa de estudos integral pelo PROUNI,1
+27, bolsa de estudos integral pelo PROUNI,1
+28,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+29,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+30,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+30," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+31,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+31," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+32, bolsa de estudos integral pelo PROUNI,1
+33,Meus estudos são custeados integralmente por mim,5
+34,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+34, bolsa de estudos integral pelo PROUNI,13
+35, bolsa de estudos integral pelo PROUNI,1
+36,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+36," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+37, bolsa de estudos integral pelo PROUNI,1
+38, bolsa de estudos integral pelo PROUNI,1
+39,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+40,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+41, bolsa de estudos integral pelo PROUNI,1
+42, bolsa de estudos integral pelo PROUNI,1
+43, bolsa de estudos parcial pelo PROUNI,14
+44,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+45,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+46,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+47,Meus estudos são custeados integralmente por mim,5
+48, bolsa de estudos integral pelo PROUNI,1
+49, bolsa de estudos integral pelo PROUNI,1
+50,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+50, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+51, bolsa de estudos integral pelo PROUNI,1
+52,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+52," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+53, bolsa de estudos integral pelo PROUNI,1
+54, bolsa de estudos integral pelo PROUNI,1
+55,Meus estudos são custeados parcialmente por mim,6
+56, bolsa de ex aluno e auxilio educação da empresa que trabalho,15
+57," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",16
+58, bolsa de estudos integral pelo PROUNI,1
+59,Meus estudos são custeados integralmente por mim,5
+60, bolsa de estudos integral pelo PROUNI,1
+61, bolsa de estudos integral pelo PROUNI,1
+62, bolsa de estudos integral pelo PROUNI,1
+63,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+64, bolsa de estudos integral pelo PROUNI,1
+65," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",16
+66,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+67,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+68,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+69,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+70, bolsa de estudos integral pelo PROUNI,1
+71, bolsa de estudos integral pelo PROUNI,1
+72,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+73,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+74,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+74," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+75,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+76,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+77,Meus estudos são custeados parcialmente por mim,6
+78,Meus estudos são custeados integralmente por mim,17
+78," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+79,Meus estudos são custeados integralmente por mim,5
+80,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+81,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+82,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+83,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+83, bolsa de estudos parcial pelo PROUNI,18
+84,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+84, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+85,Meus estudos são custeados parcialmente por mim,6
+86,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+87, bolsa de estudos parcial pelo PROUNI,14
+88, bolsa de estudos integral pelo PROUNI,1
+89, bolsa de estudos integral pelo PROUNI,1
+90,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+91,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+91, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+92,Meus estudos são custeados integralmente por mim,5
+93, bolsa de estudos integral pelo PROUNI,1
+94, bolsa de estudos integral pelo PROUNI,1
+95,Meus estudos são custeados integralmente por mim,17
+95, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+96,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+97, bolsa de estudos integral pelo PROUNI,1
+98, bolsa de estudos integral pelo PROUNI,1
+99,Meus estudos são custeados integralmente por mim,5
+100,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+101,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+101, Bolsa por transferência externa,19
+102, bolsa de estudos integral pelo PROUNI,1
+103, bolsa de estudos integral pelo PROUNI,1
+104,Meus estudos são custeados parcialmente por mim,20
+104, bolsa de estudos parcial pelo PROUNI,18
+105, bolsa de estudos integral pelo PROUNI,1
+106, bolsa de estudos integral pelo PROUNI,1
+107, bolsa de estudos integral pelo PROUNI,1
+108, bolsa de estudos integral pelo PROUNI,1
+109,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+110, bolsa de estudos integral pelo PROUNI,1
+111,Meus estudos são custeados parcialmente por mim,20
+111, bolsa de estudos parcial pelo PROUNI,18
+112,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+113,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+114,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+115,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+115, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+116,Meus estudos são custeados integralmente por mim,5
+117,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+118,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+119, bolsa de estudos integral pelo PROUNI,1
+120,Meus estudos são custeados parcialmente por outra(s) pessoa(s),21
+120, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+121, bolsa de estudos integral pelo PROUNI,1
+122," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",16
+123,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+124, bolsa de estudos integral pelo PROUNI,1
+125, bolsa de estudos integral pelo PROUNI,1
+126,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+126, bolsa de estudos parcial pelo PROUNI,18
+127,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+127, bolsa de estudos parcial pelo PROUNI,18
+128,Meus estudos são custeados integralmente por mim,17
+128, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+129, bolsa de estudos integral pelo PROUNI,1
+130, bolsa de estudos integral pelo PROUNI,1
+131,Meus estudos são custeados integralmente por mim,5
+132,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+133, bolsa de estudos integral pelo PROUNI,1
+134,Meus estudos são custeados integralmente por mim,5
+135,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+136, bolsa de estudos integral pelo PROUNI,1
+137, bolsa de estudos integral pelo PROUNI,1
+138,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+139,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+140,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+141,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+142, bolsa de estudos integral pelo PROUNI,1
+143, bolsa de estudos integral pelo PROUNI,1
+144,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+145,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+146,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+147,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+148, bolsa de estudos integral pelo PROUNI,1
+149, bolsa de estudos integral pelo PROUNI,1
+150,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+150, bolsa de estudos parcial pelo PROUNI,18
+151, bolsa de estudos integral pelo PROUNI,1
+152,Meus estudos são custeados integralmente por mim,5
+153, bolsa de estudos integral pelo PROUNI,1
+154, bolsa de estudos integral pelo PROUNI,1
+155,Meus estudos são custeados parcialmente por outra(s) pessoa(s),21
+155, bolsa de estudos integral pelo PROUNI,13
+156, bolsa de estudos integral pelo PROUNI,1
+157,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+157," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+158, bolsa de estudos integral pelo PROUNI,1
+159,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+160," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",16
+161,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+162, bolsa de estudos integral pelo PROUNI,1
+163,Meus estudos são custeados integralmente por mim,17
+163, Meus estudos são custeados parcialmente por mim,22
+164,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+165,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+165, bolsa de estudos parcial pelo PROUNI,18
+166, bolsa de estudos integral pelo PROUNI,1
+167, bolsa de estudos integral pelo PROUNI,1
+168,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+169,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+170, bolsa de estudos integral pelo PROUNI,1
+171,Meus estudos são custeados integralmente por mim,5
+172,Meus estudos são custeados parcialmente por outra(s) pessoa(s),23
+173,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+174,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+175, bolsa de estudos integral pelo PROUNI,1
+176,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+176," Meus estudos são integralmente financiados (FIES, PRAVALER, etc)",24
+177,Meus estudos são custeados parcialmente por outra(s) pessoa(s),23
+178,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+179,Meus estudos são custeados parcialmente por mim,20
+179, bolsa de estudos parcial pelo PROUNI,18
+180, bolsa de estudos integral pelo PROUNI,1
+181,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+181," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+182, bolsa de estudos integral pelo PROUNI,1
+183,Meus estudos são custeados integralmente por mim,17
+183, bolsa de estudos integral pelo PROUNI,13
+184," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",16
+185,Meus estudos são custeados parcialmente por outra(s) pessoa(s),21
+185," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+186, bolsa de estudos integral pelo PROUNI,1
+187, bolsa de estudos integral pelo PROUNI,1
+188,Meus estudos são custeados parcialmente por outra(s) pessoa(s),21
+188, bolsa de estudos parcial pelo PROUNI,18
+189,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+189, bolsa de estudos parcial pelo PROUNI,18
+190, bolsa de estudos integral pelo PROUNI,1
+191, bolsa de estudos parcial pelo Bolsa Social PUC Minas,10
+192, bolsa de estudos integral pelo PROUNI,1
+193,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+194, bolsa de estudos integral pelo PROUNI,1
+195,Meus estudos são custeados integralmente por mim,5
+196,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+196, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+197, bolsa de estudos integral pelo PROUNI,1
+198,Meus estudos são custeados integralmente por mim,5
+199,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+200,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+200, Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),25
+201,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+202, bolsa de estudos parcial pelo Bolsa Social PUC Minas,10
+203, bolsa de estudos integral pelo PROUNI,1
+204,"Meus estudos são parcialmente financiados (FIES, PRAVALER, etc)",26
+204, bolsa de estudos parcial pelo PROUNI,18
+205, bolsa de estudos integral pelo PROUNI,1
+206, bolsa de estudos integral pelo PROUNI,1
+207,Meus estudos são custeados integralmente por mim,5
+208,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+209,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+210,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+211,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+212,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+212," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+213, bolsa de estudos integral pelo PROUNI,1
+214,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+214, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+215,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+216,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+217, bolsa de estudos integral pelo PROUNI,1
+218, bolsa de estudos integral pelo PROUNI,1
+219,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+219, bolsa de estudos integral pelo PROUNI,13
+220,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+221, bolsa de estudos integral pelo PROUNI,1
+222, bolsa de estudos integral pelo PROUNI,1
+223,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+224,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+225,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+226,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+227, bolsa de estudos integral pelo PROUNI,1
+228,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+229,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+230, bolsa de estudos integral pelo PROUNI,1
+231,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+232,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+233,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+234,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+235,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+235, bolsa de estudos integral pelo PROUNI,13
+236,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+237,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+238,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+239,Meus estudos são custeados parcialmente por outra(s) pessoa(s),21
+239, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+240,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+241,"Meus estudos são integralmente financiados (FIES, PRAVALER, etc)",27
+242,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+243,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+244,Meus estudos são custeados parcialmente por mim,20
+244, bolsa de estudos parcial pelo PROUNI,18
+245,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+246,Meus estudos são custeados integralmente por mim,5
+247, bolsa de estudos integral pelo PROUNI,1
+248,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+249,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+250, bolsa de estudos integral pelo PROUNI,1
+251,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+252,Meus estudos são custeados parcialmente por mim,6
+253, bolsa de estudos parcial pelo Bolsa Social PUC Minas,10
+254,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+255,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+256,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+257,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+258, bolsa de estudos integral pelo PROUNI,1
+259,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+260, bolsa de estudos integral pelo PROUNI,1
+261,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+262,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+263,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+264,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+265,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+266, bolsa de estudos integral pelo PROUNI,1
+267,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+268,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+269,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+270, bolsa de estudos parcial pelo PROUNI,14
+271, bolsa de estudos parcial pelo PROUNI,14
+272,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+273,Meus estudos são custeados integralmente por mim,5
+274, bolsa de estudos integral pelo PROUNI,1
+275, bolsa de estudos integral pelo PROUNI,1
+276, bolsa de estudos integral pelo PROUNI,1
+277,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+278, bolsa de estudos integral pelo PROUNI,1
+279,Meus estudos são custeados integralmente por mim,5
+280, bolsa de estudos integral pelo PROUNI,1
+281, bolsa de estudos integral pelo PROUNI,1
+282,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+282, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+283,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+284,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+284, bolsa de estudos parcial pelo Bolsa Social PUC Minas,4
+285,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+286,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+286, bolsa de estudos integral pelo PROUNI,13
+287,Meus estudos são custeados integralmente por mim,17
+287, bolsa de estudos integral pelo PROUNI,13
+288, bolsa de estudos integral pelo PROUNI,1
+289,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+290, bolsa de estudos parcial pelo PROUNI,14
+291, bolsa de estudos integral pelo PROUNI,1
+292, bolsa de estudos parcial pelo PROUNI,14
+293,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+294, bolsa de estudos integral pelo PROUNI,1
+295, bolsa de estudos integral pelo PROUNI,1
+296, bolsa de estudos integral pelo PROUNI,1
+297,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+298,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+299,Meus estudos são custeados integralmente por mim,17
+299, Meus estudos são custeados parcialmente por outra(s) pessoa(s),28
+300, bolsa de estudos integral pelo PROUNI,1
+301,Meus estudos são custeados parcialmente por mim,20
+301, bolsa de estudos integral pelo PROUNI,13
+302, bolsa de estudos integral pelo PROUNI,1
+303, bolsa de estudos integral pelo PROUNI,1
+304,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+304," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+305,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+306,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+307,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+308,Meus estudos são custeados integralmente por mim,5
+309,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+310,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+311,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+311," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+312,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+313,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+314,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+315,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+316,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+317,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+318, bolsa de estudos integral pelo PROUNI,1
+319,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+320,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+321,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+322,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+323,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+324,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+325,Meus estudos são custeados integralmente por mim,5
+326, bolsa de estudos integral pelo PROUNI,1
+327,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+328,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+329,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+330,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+331, bolsa de estudos integral pelo PROUNI,1
+332,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+333,Meus estudos são custeados integralmente por mim,5
+334,Meus estudos são custeados integralmente por mim,5
+335, bolsa de estudos parcial pelo Bolsa Social PUC Minas,10
+336,Meus estudos são custeados integralmente por mim,5
+337,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+338, bolsa de estudos integral pelo PROUNI,1
+339, bolsa de estudos integral pelo PROUNI,1
+340,Meus estudos são custeados parcialmente por mim,20
+340," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+341,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+342,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+343, bolsa de estudos integral pelo PROUNI,1
+344, bolsa de estudos integral pelo PROUNI,1
+345,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+346,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+347,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+348,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+349, bolsa de estudos integral pelo PROUNI,1
+350,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+351,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),12
+351, bolsa de estudos parcial pelo PROUNI,18
+352,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+353, bolsa de estudos integral pelo PROUNI,1
+354,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+355,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+356, bolsa de estudos integral pelo PROUNI,1
+357,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+358,Meus estudos são custeados integralmente por mim,17
+358," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+359,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+360, bolsa de estudos integral pelo PROUNI,1
+361,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+362,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+363,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+364,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+365, bolsa de estudos integral pelo PROUNI,1
+366,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+367,Meus estudos são custeados em parte por mim e em parte por outra(s) pessoa(s),7
+368, bolsa de estudos integral pelo PROUNI,1
+369, bolsa de estudos integral pelo PROUNI,1
+370, bolsa de estudos integral pelo PROUNI,1
+371,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+372,Meus estudos são custeados integralmente por outra(s) pessoa(s),3
+372," benefício e/ou desconto institucional (professores, funcionários, ex-alunos, empresas parceiras, etc)",11
+373,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
+374, bolsa de estudos integral pelo PROUNI,1
+375, bolsa de estudos integral pelo PROUNI,1
+376,Meus estudos são custeados parcialmente por mim,6
+377, bolsa de estudos parcial pelo PROUNI,14
+378,Meus estudos são custeados parcialmente por mim,6
+379, bolsa de estudos parcial pelo PROUNI,14
+380, bolsa de estudos integral pelo PROUNI,1
+381, bolsa de estudos integral pelo PROUNI,1
+382,Meus estudos são custeados integralmente por outra(s) pessoa(s),2
