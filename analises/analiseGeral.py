@@ -122,7 +122,7 @@ class AnaliseGeral:
         return self.df_completo[coluna].unique()
     
     def valores_filtrados_resposta(self, campo_resposta):
-        dados_agrupados = self.df_completo[self.df_completo['frequentemente_tem_estresse_ansiedade'].isin(campo_resposta)]
+        dados_agrupados = self.df_completo[self.df_completo['Mal-estar na Universidade'].isin(campo_resposta)]
         ids = dados_agrupados['id'].unique()
         return self.df[self.df['id'].isin(ids)]
     
