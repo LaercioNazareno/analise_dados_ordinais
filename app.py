@@ -33,7 +33,7 @@ bar_chart = alt.Chart(dados).mark_bar().encode(
 st.altair_chart(bar_chart, use_container_width=True)
 
 ## Gerar tablea
-st.table(dados)
+st.dataframe(dados)
 
 ## Correlação
 st.subheader('Correlação')
@@ -69,31 +69,18 @@ if len(campos) > 1:
     df = analise_geral.buscar_dados_agrupados_por(list(campos))
     corr, p_value = analise_geral.correlacionar(list(campos))
     st.write(f'O nivel de significancia(p valor) é de {round(p_value,2)} com uma correlação de {round(corr,2)}')
-    st.table(df)
-    for item in df[campos_geracao].unique():
-        df_filter = df[df[campos_geracao] == item]
-        
-        bar_chart = alt.Chart(df_filter).mark_bar().encode(
-        x=alt.X('quantidade', title='quantidade'),
-        y=alt.Y(campos_comparacao, title=campos_comparacao, sort='-x'),
-        color=campos_comparacao
-        ).properties(
-            title=f'Gráfico de Barras: {item}'
-        )
-        st.altair_chart(bar_chart, use_container_width=True)
+    st.dataframe(df)
 
+st.subheader("Caracteristicas gerais")
 campos_multivariados = st.multiselect("Selecione variaveis para verificar os grupos", analise_geral.buscar_colunas_texto())
 if len(campos_multivariados) > 1:
-    df = analise_geral.buscar_dados_agrupados_por(list(campos_multivariados))
+    filtros = []
+    for campo in campos_multivariados:
+        filtro = st.selectbox(f'selecione o valor para o campo {campo}', analise_geral.buscar_valores_distintos_coluna(campo))
+        filtros.append({'campo': campo, 'valor': filtro})
+        
+    df = analise_geral.buscar_dados_agrupados_filtrado_por(filtros)
     st.dataframe(df)
-    bar_chart = alt.Chart(df).mark_bar().encode(
-        x=alt.X('quantidade', title='quantidade'),
-        y=alt.Y('categoria', title=campo, sort='-x'),
-        color='categoria'
-    ).properties(
-        title=f'Gráfico de Barras: {campo}'
-    )
-    st.altair_chart(bar_chart, use_container_width=True)
 
 st.subheader('Classificação')
 campos_clusterizacao = st.multiselect("Selecione dois campos para classificacao", analise_geral.buscar_colunas_numericas())

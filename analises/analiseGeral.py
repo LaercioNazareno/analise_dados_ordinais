@@ -32,7 +32,26 @@ class AnaliseGeral:
     
     def buscar_qtd_dados(self):
         return len(self.df_selecionado)
+    
+    def buscar_dados_agrupados_filtrado_por(self, filtros):
+        df = self.df_selecionado
+        campos = []
+        for filtro in filtros:
+            campos.append(filtro['campo'])
+            df = df[df[filtro['campo']] == filtro['valor']]
+        df = df.groupby(campos).size().reset_index(name='quantidade')
+        df['porcentagem'] = (df['quantidade'] / self.buscar_qtd_dados()) * 100
         
+        categorias = []
+        for index, row in df.iterrows():
+            categoria = ''
+            for campo in campos:
+                categoria = categoria + ' ' + str(row[campo])
+            categorias.append(categoria)
+        
+        df['categoria'] = categorias
+        return df
+    
     def buscar_dados_agrupados_por(self, campos: list):
         dados_agrupados = self.df_selecionado.groupby(campos).size().reset_index(name='quantidade')
         dados_agrupados['porcentagem'] = (dados_agrupados['quantidade'] / self.buscar_qtd_dados()) * 100
@@ -86,7 +105,6 @@ class AnaliseGeral:
         return kmeans.labels_
 
     def correlacionar(self, campos):
-        print(campos)
         campo_1 = campos[0]
         campo_2 = campos[1]
         corr, p_value = kendalltau(self.df_selecionado[campo_1], self.df_selecionado[campo_2])
