@@ -66,16 +66,16 @@ class AnaliseGeral:
         dados_agrupados['categoria'] = categorias
         return dados_agrupados
         
-    def buscar_correlacao(self, colunas):
+    def buscar_correlacao_colunas(self, colunas):
         coorelacao = self.df_selecionado[colunas].corr(method='kendall').stack().reset_index().rename(columns={0: 'correlation'})
         coorelacao['correlation_label'] = coorelacao.iloc[:, [2]].map('{:.2f}'.format)
         return coorelacao
     
-    def buscar_correlacao_acima_de(self, valor):
+    def buscar_correlacao(self):
         df_correlacao = self.df_selecionado[self.buscar_colunas_numericas()]
         correlacao = df_correlacao.corr(method='kendall').stack().reset_index().rename(columns={0: 'correlation'})
         correlacao['correlation_label'] = correlacao.iloc[:, [2]].map('{:.2f}'.format)
-        return correlacao[correlacao['correlation'] > valor] 
+        return correlacao
     
     def calculate_wcss(self, df_encoded):
         range_k = range(2, 30)
@@ -112,11 +112,6 @@ class AnaliseGeral:
     
     def set_list(self, campo_1, campo_2):
         return list(set([campo_1,campo_2]))
-    
-    def add_campos_numericos(self, campo_1, campo_2):
-        campo_3 = campo_1 + '_Numerico'
-        campo_4 = campo_2 + '_Numerico'
-        return list(set([campo_1, campo_2, campo_3, campo_4]))
     
     def buscar_valores_completo_distintos_coluna(self, coluna):
         return self.df_completo[coluna].unique()
